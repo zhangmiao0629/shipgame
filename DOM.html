@@ -5,17 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script>
-  function init (){
-    var obj = document.getElementById("title");
+   function init(){
+     var h1obj = document.getElementById("title");
+     var picobj = document.getElementById("pic");
 
-    alert(obj.innerHTML);
-    obj.innerHTML = "GOODBYE WORLD";
-  }
-  windows.onload = init;
-    </script>
+     // alert (obj.innerHTMl);
+     h1obj.innerHTML ="GOODBYE WORLD!!";
+     h1obj.setAttribute("class","tit");//setAttribute
+     picobj.setAttribute("src","2.jpg");
+     picobj.setAttribute("alt");
+   }
+
+   window.onload = init; //实际上是个“回调函数”， 要求在页面全部加载完成后，再调用
+  </script>
 </head>
 <body>
   <h1 id ="title">hello world! </h1>
-  
+  <img id="pic" src= "1.jpg" alt="复仇者联盟红底图片">
 </body>
 </html>
